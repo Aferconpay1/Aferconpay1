@@ -1,0 +1,14 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // As imagens de perfil são armazenadas em /profile_pictures/{userId}/profile.jpg
+    match /profile_pictures/{userId}/profile.jpg {
+      // Permite leitura por qualquer pessoa (útil para exibir avatares publicamente)
+      allow read;
+      
+      // Permite escrita (upload, atualização, exclusão) apenas se o usuário
+      // estiver autenticado e o {userId} no caminho corresponder ao seu próprio UID.
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

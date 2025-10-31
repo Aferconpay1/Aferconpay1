@@ -1,0 +1,61 @@
+name: myapp
+description: "Aplicação de serviços financeiros Afercon Pay."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  cloud_firestore: ^6.0.2
+  crypto: ^3.0.3
+  firebase_auth: ^6.1.0
+  firebase_core: ^4.1.1
+  firebase_messaging: ^16.0.2
+  firebase_performance: ^0.11.1
+  fl_chart: ^1.1.1
+  flutter:
+    sdk: flutter
+  flutter_animate: ^4.5.0
+  flutter_local_notifications: ^19.4.2
+  flutter_secure_storage: ^9.2.2
+  go_router: ^16.2.4
+  google_fonts: ^6.2.1
+  iconsax: ^0.0.8
+  gal: ^2.2.0
+  image_picker: ^1.2.0
+  intl: ^0.20.2
+  mobile_scanner: ^7.1.2
+  open_file: ^3.5.10
+  path_provider: ^2.1.5
+  pdf: ^3.11.3
+  printing: ^5.14.2
+  provider: ^6.1.2
+  qr_flutter: ^4.1.0
+  universal_html: ^2.2.4
+  cupertino_icons: ^1.0.2
+  url_launcher: ^6.3.1
+  geolocator: ^14.0.2
+  shared_preferences: ^2.5.3
+  cloud_functions: ^6.0.3
+  share_plus: ^12.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/contracts/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/afercon.logo.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/afercon.logo.png"
+  remove_alpha_ios: true
